@@ -8,9 +8,8 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-
   getHello(): string {
-    return process.env.API_KEY;
+    return 'Node mailer is runing';
   }
 
   @Post('send-mail')
