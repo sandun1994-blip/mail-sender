@@ -8,9 +8,9 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-   @UseGuards(ApiKeyGuard)
+
   getHello(): string {
-    return 'hELLOW WORLD!';
+    return process.env.API_KEY;
   }
 
   @Post('send-mail')
